@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Gestor de Tareas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
-    <h1>Bienvenidos al Gestor de Tareas (Simulador en JavaScript)</h1>
 
+    <header>
+        <h1 id="titulo">📝 Gestor de Tareas</h1>
+    </header>
 
-<script src="assets/main.js"></script>
+    <main>
+
+        <section class="formulario">
+            <h2>Agregar nueva tarea</h2>
+
+            <form id="tareaForm">
+
+                <input type="text" id="tituloTarea" placeholder="Título de la tarea" required>
+                <label for="fecha">Fecha de vencimiento</label>
+                <input type="date" id="fecha" required>
+
+                <select id="prioridad" required>
+                    <option value="">Seleccionar prioridad</option>
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section class="lista">
+            <h2>Tareas</h2>
+            <ul id="listaTareas"></ul>
+        </section>
+
+    </main>
+
+    <script src="assets/main.js"></script>
 </body>
+
 </html>
