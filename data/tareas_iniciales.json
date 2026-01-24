@@ -1,0 +1,23 @@
+[
+    {
+        "id": 101,
+        "titulo": "Configurar proyecto final",
+        "fecha": "2026-01-25",
+        "prioridad": "media",
+        "completada": false
+    },
+    {
+        "id": 102,
+        "titulo": "Integrar SweetAlert2",
+        "fecha": "2026-01-26",
+        "prioridad": "alta",
+        "completada": false
+    },
+    {
+        "id": 103,
+        "titulo": "Mejorar formatos",
+        "fecha": "2026-01-27",
+        "prioridad": "baja",
+        "completada": false
+    }
+]

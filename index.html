@@ -2,28 +2,26 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-
     <header>
         <h1 id="titulo">📝 Gestor de Tareas</h1>
     </header>
 
     <main>
-
         <section class="formulario">
-            <h2>Agregar nueva tarea</h2>
+            <h2 id="formTitle">Agregar nueva tarea</h2>
 
             <form id="tareaForm">
+                <input type="text" id="tituloTarea" placeholder="Título de la tarea" required />
 
-                <input type="text" id="tituloTarea" placeholder="Título de la tarea" required>
                 <label for="fecha">Fecha de vencimiento</label>
-                <input type="date" id="fecha" required>
+                <input type="date" id="fecha" required />
 
                 <select id="prioridad" required>
                     <option value="">Seleccionar prioridad</option>
@@ -32,17 +30,25 @@
                     <option value="alta">Alta</option>
                 </select>
 
-                <button type="submit">Agregar</button>
+                <button type="submit" id="btnSubmit">Agregar</button>
+                <button type="button" id="btnCancelar" class="btn-secundario" style="display:none;">Cancelar
+                    edición</button>
             </form>
         </section>
 
         <section class="lista">
             <h2>Tareas</h2>
-            <ul id="listaTareas"></ul>
-        </section>
 
+            <!-- Este panel lo llena JS (HTML interactivo generado desde JS) -->
+            <div id="panelControles"></div>
+
+            <ul id="listaTareas"></ul>
+            <p id="estadoVacio" class="estado"></p>
+        </section>
     </main>
 
+    <!-- Librería externa -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/main.js"></script>
 </body>
 
